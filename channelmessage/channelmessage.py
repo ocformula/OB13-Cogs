@@ -37,7 +37,7 @@ class ChannelMessages(commands.Cog):
     async def _channelmessage(self, ctx: commands.Context, channel: discord.TextChannel, *, message=""):
         """Send an announcement message to a specific channel."""
         try:
-            await ctx.guild.get_channel(channel.id).send(f"{message}", allowed_mentions=discord.AllowedMentions(roles=True))
+            await ctx.guild.get_channel(channel.id).send(f"{message}")
             return await ctx.tick()
         except discord.Forbidden:
             return await ctx.send("I do not have permissions to send that message!")
