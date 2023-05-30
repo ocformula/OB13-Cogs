@@ -26,7 +26,7 @@ import discord
 from redbot.core import commands
 
 
-class ChannelMessages(commands.Cog):
+class ChannelMessage(commands.Cog):
     """Announcement w/ Role Ping"""
 
     def __init__(self, bot):
